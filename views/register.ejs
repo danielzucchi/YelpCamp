@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div style="width: 30%; margin: 30px auto;">
+            <h1 class="heading"><span class="glyphicon glyphicon-user"></span> Register</h1>
+
+            <form action="/register" method="POST">
+               <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" class="form-control" autofocus required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="password" class="form-control" minlength="8" id="password">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="repeatPassword" placeholder="Confirm password" class="form-control" id="confirm_password">
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    <% include ../public/scripts/register.js %>
+</script>
+
+<% include partials/footer %>

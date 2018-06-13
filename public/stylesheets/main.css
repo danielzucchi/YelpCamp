@@ -1,0 +1,114 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+h1.heading {
+    text-align: center;
+    color: #eab33a;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+    color: #1c262f;
+}
+
+.delete {
+    display: inline;
+}
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-bottom: 1px solid #f2f2f2;
+    background: #096212;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    -webkit-transition: color .3s; /* Safari */
+    transition: color .3s;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #eab33a;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    -webkit-transition: color .3s; /* Safari */
+    transition: color .3s;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #eab33a;
+}
+
+header.jumbotron {
+    background-image: url("https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=45fc8a446ad11a120c543c426382119f&auto=format&fit=crop&w=1350&q=80");
+    background-position: 0% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron.section {
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 70px 0;
+    text-align: center;
+}
+
+#callToAction {
+    color: #f8f8f8;
+}
+
+#messageAlert {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.pswValid {
+    border-color: red;
+}
+
+.footer {
+    background-color: #c4edb7;
+    padding-top: 10px;
+    height: 40px;
+}
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -40px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+

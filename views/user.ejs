@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<div class="container">
+    <h1><span class="glyphicon glyphicon-user"></span> <%= user.username %> | Profile</h1>
+
+        <div class="row well">
+            <h4>Bio</h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas neque rerum officia delectus molestiae nulla repellendus id quasi eaque voluptatibus esse, facere quidem asperiores quo doloremque quisquam provident enim odit.
+
+        </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h4>Campgrounds</h4>
+        <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+
+        <% if(campgrounds.length == 0){ %>
+            <p class="bg-warning">This user has not yet posted any campgrounds.</p>
+        <% } %>
+            <% campgrounds.forEach(function(campground){ %>
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="thumbnail">
+                        <a href="/campgrounds/<%= campground._id %>"><img src="<%= campground.image %>"></a>
+                        <div class="caption">
+                            <h4><%= campground.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                        </p>
+                    </div>
+
+                </div>
+            <% }); %>
+
+        </div>
+    </div>
+
+</div>
+
+
+<% include partials/footer %>
