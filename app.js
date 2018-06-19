@@ -52,6 +52,10 @@ app.use("/campgrounds", campgroundRoutes);
 app.use(userRoutes);
 
 
-app.listen(process.env.LISTENPORT, function(){
+//app.listen(3000, function(){
+//   console.log("Server in session.");
+//});
+
+app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Server in session.");
 });
