@@ -52,7 +52,7 @@ app.use("/campgrounds", campgroundRoutes);
 app.use(userRoutes);
 
 
-app.listen(3000, function(){
+app.listen(8080, function(){
    console.log("Server in session.");
 });
 
