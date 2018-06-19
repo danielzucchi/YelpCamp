@@ -16,8 +16,8 @@ var     commentRoutes    = require("./routes/comments"),
         indexRoutes      = require("./routes/index"),
         userRoutes       = require("./routes/user")
 
-//mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://danielzucchi:Cbl533629@ds259410.mlab.com:59410/yelp_camp");
+mongoose.connect(process.env.DATABASEURL);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -52,6 +52,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use(userRoutes);
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.LISTENPORT, function(){
    console.log("Server in session.");
 });
