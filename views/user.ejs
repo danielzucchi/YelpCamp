@@ -1,11 +1,12 @@
 <% include partials/header %>
 
-<div class="container">
-    <h1><span class="glyphicon glyphicon-user"></span> <%= user.username %> | Profile</h1>
+<div class="container" style="margin-top: 20px;">
+    <h1><i class="fas fa-user"></i> <%= user.username %> | Profile</h1>
 
-        <div class="row well">
-            <h4>Bio</h4>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas neque rerum officia delectus molestiae nulla repellendus id quasi eaque voluptatibus esse, facere quidem asperiores quo doloremque quisquam provident enim odit.
+        <div class="container card card-body m-8" style="margin-bottom: 30px;">
+            <h4 class="card-title">Bio</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas neque rerum officia delectus molestiae nulla repellendus id quasi eaque voluptatibus esse, facere quidem asperiores quo doloremque quisquam provident enim odit.
+            </p>
 
         </div>
 </div>
@@ -19,20 +20,20 @@
             <p class="bg-warning">This user has not yet posted any campgrounds.</p>
         <% } %>
             <% campgrounds.forEach(function(campground){ %>
-                <div class="col-md-3 col-sm-6">
+            <div class="col-lg-3 col-md-4 col-sm-6">
 
-                    <div class="thumbnail">
-                        <a href="/campgrounds/<%= campground._id %>"><img src="<%= campground.image %>"></a>
-                        <div class="caption">
-                            <h4><%= campground.name %></h4>
-                        </div>
-                        <p>
-                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
-                        </p>
+                <div class="card m-6">
+                    <a href="/campgrounds/<%= campground._id %>"><img class="card-img-top" src="<%= campground.image %>"></a>
+                    <div class="card-body">
+                        <a href="/campgrounds/<%= campground._id %>"><h5><%= campground.name %></h5></a>
                     </div>
-
+                    <p>
+                       <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                    </p>
                 </div>
-            <% }); %>
+
+            </div>
+        <% }); %>
 
         </div>
     </div>
